@@ -1,0 +1,16 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_4445_9003" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+<path d="M0 7.62939e-06H70V70H0V7.62939e-06Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_4445_9003)">
+<path d="M30.8198 8.66951C29.1735 7.78918 27.3206 7.30492 25.3232 7.30492C18.8434 7.30492 13.5905 12.5578 13.5905 19.0376C13.5905 19.693 13.6469 20.3349 13.7502 20.9611C10.2339 22.7511 7.82373 26.4021 7.82373 30.6181C7.82373 32.2722 8.19601 33.839 8.85896 35.2415C5.09851 36.776 2.44727 40.4671 2.44727 44.7795C2.44727 50.4678 7.05865 55.0791 12.747 55.0791H28.2022" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M60.4356 33.06C61.1714 31.5033 61.5846 29.7643 61.5846 27.9283C61.5846 23.2485 58.9094 19.1963 55.0065 17.2094C55.1212 16.5143 55.1837 15.8017 55.1837 15.0742C55.1837 7.88202 49.3532 2.05151 42.1609 2.05151C34.9686 2.05151 29.1382 7.88202 29.1382 15.0742C29.1382 15.8017 29.2007 16.5143 29.3153 17.2094C25.4125 19.1963 22.7372 23.2485 22.7372 27.9283C22.7372 29.7643 23.1503 31.5033 23.8861 33.06C19.7123 34.7632 16.7695 38.8603 16.7695 43.6468C16.7695 49.9606 21.888 55.0791 28.2018 55.0791H56.1199C62.4339 55.0791 67.5522 49.9606 67.5522 43.6468C67.5522 38.8603 64.6095 34.7632 60.4356 33.06Z" stroke="#0db14b" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M42.1611 21.2423V67.9482" stroke="#f47920" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M25.3232 55.0793V67.9482" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M34.1748 25.582L42.1216 33.5288" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M50.0679 25.582L42.1211 33.5288" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M31.9131 36.9126L42.1226 47.1221" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M52.3306 36.9126L42.1211 47.1221" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M0 67.9482H70" stroke="#DADADA" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+</svg>

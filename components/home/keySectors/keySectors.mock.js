@@ -1,0 +1,56 @@
+export const keySectors = [
+  {
+    id: 1,
+    title: "Logistics & Supply Chain",
+    bg: "/home/keysectors/supply.webp",
+    link: "/logistics",
+    // colSpan: 1,
+    // rowSpan: 2,
+    // gradient: true,
+  },
+  {
+    id: 2,
+    title: "Packaging",
+    bg: "/home/keysectors/package.webp",
+    link: "/packaging",
+  },
+  {
+    id: 3,
+    title: "Automotive & Auto Components",
+    bg: "/home/keysectors/auto.webp",
+    link: "/automotive",
+  },
+  {
+    id: 4,
+    title: "E-Commerce",
+    bg: "/home/keysectors/ecommerce.webp",
+    link: "/ecommerce",
+  },
+  {
+    id: 5,
+    title: "Renewable Energy",
+    bg: "/home/keysectors/energy.webp",
+    link: "/renewable-energy",
+  },
+  {
+    id: 6,
+    title: "Engineering & Aerospace",
+    bg: "/home/keysectors/aero.webp",
+    link: "/aerospace",
+  },
+  {
+    id: 7,
+    title: "FMCG & Retail",
+    bg: "/home/keysectors/FMCG.webp",
+    link: "/fmcg",
+  },
+  {
+    id: 8,
+    title: "Chemicals",
+    bg: "/home/keysectors/chemical.webp",
+    link: "/chemical",
+    // colSpan: 1,
+    // rowSpan: 2,
+    // gradient: true,
+  },
+];
