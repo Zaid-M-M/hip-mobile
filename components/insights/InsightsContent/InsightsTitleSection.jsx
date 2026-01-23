@@ -16,7 +16,8 @@ const InsightsTitleSection = ({ activeTab }) => {
           <div className="flex items-left flex-col md:items-left relative md:w-[460px] lg:w-[auto]">
             <div className="flex gap-[10px] md:gap-[17px] md:flex-row flex-col items-start md:items-center">
               <h2 className="lg:w-[auto] capitalize whitespace-nowrap text-[35px] leading-[45px] md:text-[45px] md:leading-[55px] lg:text-[64px] lg:leading-[74px] font-barlow font-normal tracking-[-1.4px] md:tracking-[-1.8px] lg:tracking-[-2.56px] text-black">
-                <span className="bw-r">{activeTab}</span>
+                {/* <span className="bw-r">{activeTab}</span> */}
+                <span className="bw-r">Media</span>
               </h2>
               <img
                 src="/abstract_pattern.svg"

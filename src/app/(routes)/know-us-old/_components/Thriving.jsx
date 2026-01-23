@@ -2,6 +2,7 @@
 // import { useState } from "react";
 // import React from "react";
 // import Btn from "@/components/global/Btn";
+// import { Plus } from "lucide-react";
 
 // const Thriving = () => {
 //   const [activeCard, setActiveCard] = useState(null);
@@ -42,10 +43,10 @@
 //             <div className="w-full  sm:w-1/2 items-center flex sm:hidden pt-[20px] sm:pt-0 flex-col gap-0">
 //               {/* Card 1 */}
 //               <div
-//                 className={`cursor-pointer border-t border-r flex justify-end pr-1 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 ${
+//                 className={`cursor-pointer border-t border-r flex justify-end pr-1 pt-2 relative aspect-square w-full max-w-[260px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 mr-0 ml-auto ${
 //                   activeCard === 1
 //                     ? "bg-[#f47920] border-[#f47920]"
-//                     : "border-[#BFBFBF]"
+//                     : "border-[#BFBFBF] bg-white"
 //                 }`}
 //                 onClick={() => handleCardClick(1)}
 //               >
@@ -55,7 +56,7 @@
 //                   }`}
 //                 ></div>
 //                 <p
-//                   className={`absolute text-white z-20 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-0 transition-opacity duration-300 ${
+//                   className={`absolute text-white z-0 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-0 transition-opacity duration-300 ${
 //                     activeCard === 1 ? "opacity-100" : "opacity-0"
 //                   }`}
 //                 >
@@ -67,7 +68,7 @@
 //                     activeCard === 1 ? "opacity-0" : "opacity-100"
 //                   }`}
 //                 >
-//                   <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
+//                   {/* <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
 //                     <path
 //                       d="M7.05078 27.2893L26.7902 7.5498"
 //                       stroke="black"
@@ -82,7 +83,8 @@
 //                       strokeLinecap="round"
 //                       strokeLinejoin="round"
 //                     />
-//                   </svg>
+//                   </svg> */}
+//                   <Plus />
 //                   <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
 //                     A culture of <br /> trust and <br /> openness
 //                   </p>
@@ -91,10 +93,10 @@
 
 //               {/* Card 2 */}
 //               <div
-//                 className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 ${
+//                 className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[260px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 -mt-[130px] ml-auto mr-[35px] ${
 //                   activeCard === 2
 //                     ? "bg-[#0db14b] border-[#0db14b]"
-//                     : "border-[#BFBFBF]"
+//                     : "border-[#BFBFBF] bg-white"
 //                 }`}
 //                 onClick={() => handleCardClick(2)}
 //               >
@@ -104,7 +106,7 @@
 //                   }`}
 //                 ></div>
 //                 <p
-//                   className={`absolute text-white z-20 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-2 transition-opacity duration-300 ${
+//                   className={`absolute text-white z-0 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-2 transition-opacity duration-300 ${
 //                     activeCard === 2 ? "opacity-100" : "opacity-0"
 //                   }`}
 //                 >
@@ -117,22 +119,7 @@
 //                     activeCard === 2 ? "opacity-0" : "opacity-100"
 //                   }`}
 //                 >
-//                   <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
-//                     <path
-//                       d="M7.05078 27.2893L26.7902 7.5498"
-//                       stroke="black"
-//                       strokeWidth="1.5"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                     />
-//                     <path
-//                       d="M7.05078 7.5498H26.7902V27.2893"
-//                       stroke="black"
-//                       strokeWidth="1.5"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                     />
-//                   </svg>
+//                   <Plus />
 //                   <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
 //                     A culture of <br /> Learning And <br /> Experimentation
 //                   </p>
@@ -141,10 +128,10 @@
 
 //               {/* Card 3 */}
 //               <div
-//                 className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 ${
+//                 className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[260px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 -mt-[130px] ml-auto mr-[70px] ${
 //                   activeCard === 3
 //                     ? "bg-[#8F53A1] border-[#8F53A1]"
-//                     : "border-[#BFBFBF]"
+//                     : "border-[#BFBFBF] bg-white"
 //                 }`}
 //                 onClick={() => handleCardClick(3)}
 //               >
@@ -166,22 +153,7 @@
 //                     activeCard === 3 ? "opacity-0" : "opacity-100"
 //                   }`}
 //                 >
-//                   <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
-//                     <path
-//                       d="M7.05078 27.2893L26.7902 7.5498"
-//                       stroke="black"
-//                       strokeWidth="1.5"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                     />
-//                     <path
-//                       d="M7.05078 7.5498H26.7902V27.2893"
-//                       stroke="black"
-//                       strokeWidth="1.5"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                     />
-//                   </svg>
+//                   <Plus />
 //                   <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
 //                     A culture that <br /> values diversity, <br /> quality and{" "}
 //                     <br /> responsibility
@@ -312,26 +284,12 @@
 // };
 
 // export default Thriving;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 "use client";
 import { useState } from "react";
 import React from "react";
 import Btn from "@/components/global/Btn";
+import { Plus } from "lucide-react";
+import ThrivingMobile from "./ThrivingTMob";
 
 const Thriving = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -369,156 +327,10 @@ const Thriving = () => {
 
             <Btn href="/culture/" text="Careers" />
             {/* Mobile Grid Cards */}
-            <div className="w-full  sm:w-1/2 items-center flex sm:hidden pt-[20px] sm:pt-0 flex-col gap-0">
-              {/* Card 1 */}
-              <div
-                className={`cursor-pointer border-t border-r flex justify-end pr-1 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 ${
-                  activeCard === 1
-                    ? "bg-[#f47920] border-[#f47920]"
-                    : "border-[#BFBFBF]"
-                }`}
-                onClick={() => handleCardClick(1)}
-              >
-                <div
-                  className={`absolute w-[142%] h-[1px] bg-[#BFBFBF] top-1/2 -left-[21%] rotate-45 transition-opacity duration-300 ${
-                    activeCard === 1 ? "opacity-0" : "opacity-100"
-                  }`}
-                ></div>
-                <p
-                  className={`absolute text-white z-20 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-0 transition-opacity duration-300 ${
-                    activeCard === 1 ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  At Horizon, collaboration is at the heart of how we work and
-                  grow together. Success is a collective journey.
-                </p>
-                <div
-                  className={`flex flex-col gap-2 items-end transition-opacity duration-300 pr-1 ${
-                    activeCard === 1 ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
-                    <path
-                      d="M7.05078 27.2893L26.7902 7.5498"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M7.05078 7.5498H26.7902V27.2893"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
-                    A culture of <br /> trust and <br /> openness
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div
-                className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 -mt-[50px] mr-[50px] ${
-                  activeCard === 2
-                    ? "bg-[#0db14b] border-[#0db14b]"
-                    : "border-[#BFBFBF]"
-                }`}
-                onClick={() => handleCardClick(2)}
-              >
-                <div
-                  className={`absolute w-[142%] h-[1px] bg-[#BFBFBF] top-1/2 -left-[21%] rotate-45 transition-opacity duration-300 ${
-                    activeCard === 2 ? "opacity-0" : "opacity-100"
-                  }`}
-                ></div>
-                <p
-                  className={`absolute text-white z-20 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-2 transition-opacity duration-300 ${
-                    activeCard === 2 ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  Agility is more than a workplace trait—it is a mindset that
-                  empowers us to innovate, adapt, and deliver excellence every
-                  step of the way.
-                </p>
-                <div
-                  className={`flex flex-col gap-2 items-end transition-opacity duration-300 ${
-                    activeCard === 2 ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
-                    <path
-                      d="M7.05078 27.2893L26.7902 7.5498"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M7.05078 7.5498H26.7902V27.2893"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
-                    A culture of <br /> Learning And <br /> Experimentation
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div
-                className={`border-t border-r flex justify-end pr-2 pt-2 relative aspect-square w-full max-w-[280px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 -mt-[50px] mr-[100px] ${
-                  activeCard === 3
-                    ? "bg-[#8F53A1] border-[#8F53A1]"
-                    : "border-[#BFBFBF]"
-                }`}
-                onClick={() => handleCardClick(3)}
-              >
-                <div
-                  className={`absolute w-[142%] h-[1px] bg-[#BFBFBF] top-1/2 -left-[21%] rotate-45 transition-opacity duration-300 ${
-                    activeCard === 3 ? "opacity-0" : "opacity-100"
-                  }`}
-                ></div>
-                <p
-                  className={`absolute text-white z-20 text-center top-1/2 -translate-y-1/2 bw-r text-[18px] sm:text-[20px] px-1 transition-opacity duration-300 ${
-                    activeCard === 3 ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  From embracing diversity to fostering mentorship, safety, and
-                  sustainability, being excellent is a core part of our ethos.
-                </p>
-                <div
-                  className={`flex flex-col gap-2 items-end transition-opacity duration-300 ${
-                    activeCard === 3 ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <svg width="24" height="24" viewBox="0 0 34 35" fill="none">
-                    <path
-                      d="M7.05078 27.2893L26.7902 7.5498"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M7.05078 7.5498H26.7902V27.2893"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <p className="cursor-pointer text-[18px] sm:text-[14px] 1280:text-[20px] bw-r text-right w-[160px] capitalize">
-                    A culture that <br /> values diversity, <br /> quality and{" "}
-                    <br /> responsibility
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ThrivingMobile
+              activeCard={activeCard}
+              handleCardClick={handleCardClick}
+            />
           </div>
 
           {/* Right Column (Grid Cards) */}

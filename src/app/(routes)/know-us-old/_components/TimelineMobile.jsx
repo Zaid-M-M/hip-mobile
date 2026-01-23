@@ -48,15 +48,15 @@ export default function TimelineMobile({ years, data }) {
 
       {/* YEAR SLIDER */}
       <div className="mt-8">
-        <div className="relative flex justify-between items-center">
+        <div className="relative flex justify-between items-center px-[15px]">
           {years.map((year) => {
             const isActive = year === activeYear;
             return (
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`bw-m text-[14px] transition-all ${
-                  isActive ? "text-transparent bg-clip-text" : "text-[#8A8A8A]"
+                className={`bw-m text-[18px] transition-all ${
+                  isActive ? "text-transparent bg-clip-text" : "text-[#fff]"
                 }`}
                 style={
                   isActive
