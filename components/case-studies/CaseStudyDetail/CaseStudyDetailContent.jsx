@@ -32,12 +32,12 @@ const CaseStudyDetailContent = ({ data }) => {
     const fetchRelated = async () => {
       try {
         const response = await fetch(
-          "https://phpstack-725513-2688800.cloudwaysapps.com/cms/wp-json/wp/v2/client_stories?per_page=100"
+          "https://phpstack-725513-2688800.cloudwaysapps.com/cms/wp-json/wp/v2/client_stories?per_page=100",
         );
         const posts = await response.json();
         const matching = posts.filter(
           (post) =>
-            post.acf?.industry === data.acf.industry && post.id !== data.id
+            post.acf?.industry === data.acf.industry && post.id !== data.id,
         );
         setRelatedCards(matching);
       } catch (error) {
@@ -265,7 +265,7 @@ const CaseStudyDetailContent = ({ data }) => {
               className="text-left mb-[30px] sm:mb-[35px] md:mb-[40px]"
             >
               <h2 className="text-[35px] leading-[45px] md:text-[45px] md:leading-[55px] lg:text-[64px] lg:leading-[74px] font-medium mb-[20px] sm:mb-[25px] md:mb-[18px] txt_gradient font-barlow tracking-[-1.4px] md:tracking-[-1.8px] lg:tracking-[-2.56px]">
-                {data.acf?.closer_title || "Objectives"}
+                {data.acf?.closer_titile || "Objectives"}
               </h2>
               {data.acf?.closer_paragraph && (
                 <div

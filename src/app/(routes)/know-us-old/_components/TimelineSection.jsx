@@ -177,7 +177,8 @@
 "use client";
 import { useState } from "react";
 import TimelineContent from "./TimelineContent";
-import TimelineTabsMobile from "./TimelineTabsMobile";
+// import TimelineTabsMobile from "./TimelineTabsMobile";
+import TimelineMobile from "./TimelineMobile"; // NEW
 import TimelineTabs from "./TimelineTabs";
 
 const timelineData = {
@@ -329,13 +330,16 @@ export default function TimelineSection() {
   return (
     <section className="py-[32px] sm:py-[70px] text-white bg-black">
       {/* Mobile layout */}
-      <div className="flex flex-col h-[auto] md:h-[650px] md:hidden">
+      {/* <div className="flex flex-col h-[auto] md:h-[650px] md:hidden">
         <TimelineContent events={timelineData[activeYear]} />
         <TimelineTabsMobile
           years={years}
           activeYear={activeYear}
           setActiveYear={setActiveYear}
         />
+      </div> */}
+      <div className="md:hidden">
+        <TimelineMobile years={years} data={timelineData} />
       </div>
 
       {/* Desktop layout */}

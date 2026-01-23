@@ -1593,6 +1593,7 @@ const EventTabContent = () => {
         {showSkeleton ? (
           <motion.div
             key="skeleton"
+            className="px-[5%]"
             initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

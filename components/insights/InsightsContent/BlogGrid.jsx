@@ -70,15 +70,15 @@ const BlogGrid = ({ blogs, activeTab, pressReleaseFilter }) => {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 1440:w-[1340px] 1440:mx-auto mx-[5%] md:grid-cols-2 lg:grid-cols-3 gap-[15px] md:gap-[40px] mb-10">
+      <div className="grid grid-cols-1 1440:w-[1340px] 1440:mx-auto md:mx-[5%] md:grid-cols-2 lg:grid-cols-3 gap-[15px] md:gap-[40px] mb-10">
         {blogs.map((blog, index) => {
           const isNewsTab =
             activeTab === "News" && pressReleaseFilter === "news";
           const resolvedActiveTab = isNewsTab
             ? "News"
             : activeTab === "Press Release"
-            ? "Press Release"
-            : activeTab;
+              ? "Press Release"
+              : activeTab;
           return (
             <div key={blog.id || index}>
               {isNewsTab ? (
