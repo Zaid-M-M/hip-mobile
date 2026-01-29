@@ -30,7 +30,8 @@ export default function VMmainF() {
       </main>
 
       {/* ---------- Mobile Static Section ---------- */}
-      <section className="lg:hidden grid grid-cols-1 gap-6 px-[5%] py-12 bg-black">
+      {/* <section className="lg:hidden grid grid-cols-1 gap-6 px-[5%] py-12 bg-black"> */}
+      <section className="lg:hidden! hidden! grid-cols-1 gap-6 px-[5%] py-12 bg-black">
         <div className="flex flex-col gap-0">
           <img
             src="/sustainability/ripple.jpg"
@@ -128,7 +129,7 @@ function Purpose({ progress }) {
   const msn_dv_height = useTransform(
     progress,
     [0, 0.6],
-    [is2xl ? 204 : 170, is2xl ? 636 : 600]
+    [is2xl ? 204 : 170, is2xl ? 636 : 600],
   );
 
   const msn_dv_opacity = useTransform(progress, [0, 0.6], [0, 1]);
