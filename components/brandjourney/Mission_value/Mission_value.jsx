@@ -1,6 +1,7 @@
 "use client";
 import MissionDesk from "./MissionDesk";
 import MissionMobile from "./MissionMobile";
+import MissionMobileF from "./MissionMobileF";
 
 export default function Mission_value() {
   return (
@@ -9,7 +10,7 @@ export default function Mission_value() {
         <MissionDesk />
       </div>
       <div className="block xl:hidden">
-        <MissionMobile />
+        <MissionMobileF />
       </div>
     </>
   );

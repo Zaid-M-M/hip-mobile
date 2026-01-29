@@ -42,7 +42,7 @@
 //                         className="sm:w-[70px] w-[46px] h-[46px] sm:h-[70px]"
 //                       />
 //                     )}
-//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 
+//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px]
 //         1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
 //                       {item.text}
 //                     </p>
@@ -58,7 +58,7 @@
 //                         className="sm:w-[70px] w-[46px] h-[46px] sm:h-[70px]"
 //                       />
 //                     )}
-//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 
+//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px]
 //         1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
 //                       {item.text}
 //                     </p>
@@ -74,7 +74,7 @@
 
 //                 {layoutType === 2 && (
 //                   <>
-//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 
+//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px]
 //         1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
 //                       {item.text}
 //                     </p>
@@ -104,7 +104,7 @@
 //                         className="w-full sm:w-[284px] h-[128px] sm:h-[150px] object-cover"
 //                       />
 //                     )}
-//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 
+//                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px]
 //         1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
 //                       {item.text}
 //                     </p>
@@ -118,7 +118,6 @@
 //                   </>
 //                 )}
 //               </div>
-
 
 //             );
 //           })}
@@ -183,8 +182,11 @@ export default function TimelineContent({ events = [] }) {
             return (
               <div
                 key={item.id}
-                className={`break-inside-avoid py-5 flex flex-col items-start space-y-3 ${lastItemsInColumns.has(index) ? '' : 'border-b border-[#4B4B4B]'
-                  }`}
+                className={`break-inside-avoid py-5 flex flex-col items-start space-y-3 ${
+                  lastItemsInColumns.has(index)
+                    ? ""
+                    : "border-b border-[#4B4B4B]"
+                }`}
               >
                 {/* Custom layout for last two elements */}
                 {index >= events.length - 2 ? (
@@ -200,7 +202,7 @@ export default function TimelineContent({ events = [] }) {
                       <img
                         src={item.icon}
                         alt="timeline-icon"
-                        className="sm:w-[70px] w-[46px] h-[46px] sm:h-[70px]"
+                        className="w-[140px] h-[85px]"
                       />
                     )}
                     <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
@@ -223,7 +225,7 @@ export default function TimelineContent({ events = [] }) {
                           <img
                             src={item.icon}
                             alt="timeline-icon"
-                            className="sm:w-[70px] w-[46px] h-[46px] sm:h-[70px]"
+                            className="w-[140px] h-[85px]"
                           />
                         )}
                         <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
@@ -238,7 +240,7 @@ export default function TimelineContent({ events = [] }) {
                           <img
                             src={item.icon}
                             alt="timeline-icon"
-                            className="sm:w-[70px] w-[46px] h-[46px] sm:h-[70px]"
+                            className="w-[140px] h-[85px]"
                           />
                         )}
                         <p className="text-[14px] leading-[24px] bw-r sm:text-lg md:text-[16px] 1280:leading-[26px] sm:leading-relaxed text-[#E0E0E0]">
@@ -270,7 +272,7 @@ export default function TimelineContent({ events = [] }) {
                           <img
                             src={item.icon}
                             alt="timeline-icon"
-                            className="sm:w-[80px] w-[46px] h-[46px] sm:h-[80px]"
+                            className="w-[140px] h-[85px]"
                           />
                         )}
                       </>
@@ -292,7 +294,7 @@ export default function TimelineContent({ events = [] }) {
                           <img
                             src={item.icon}
                             alt="timeline-icon"
-                            className="sm:w-[80px] w-[46px] h-[46px] sm:h-[80px]"
+                            className="w-[140px] h-[85px]"
                           />
                         )}
                       </>

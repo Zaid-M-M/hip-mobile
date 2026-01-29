@@ -15,6 +15,7 @@ import Mission_value_Copy from "./Mission_value/Mission_value_Copy";
 import Leadership from "./Leadership/Leadership";
 import TeamSecF from "../../src/app/(routes)/leadership/Components/TeamSecF";
 import Awards from "./Awards/Awards";
+import AwardsMobile from "./Awards/NewAwards/AwardsMobile";
 
 import Milestone from "../../src/app/(routes)/know-us-old/_components/Milestone";
 import Thriving from "../../src/app/(routes)/know-us-old/_components/Thriving";
@@ -30,7 +31,14 @@ const BrandJrnyWrapper = () => {
         {/* <Leadership /> */}
         <TeamSecF />
         <Thriving />
-        <Awards />
+        {/* Desktop Awards */}
+        <div className="hidden xl:block">
+          <Awards />
+        </div>
+        {/* Mobile Awards */}
+        <div className="block xl:hidden">
+          <AwardsMobile />
+        </div>
       </ReactLenis>
     </div>
   );

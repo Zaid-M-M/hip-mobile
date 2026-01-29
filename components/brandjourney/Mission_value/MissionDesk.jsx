@@ -10,11 +10,7 @@ export default function MissionDesk() {
   });
 
   return (
-    <main
-      ref={container_new}
-      className="w-full"
-      style={{ height: "250vh" }}
-    >
+    <main ref={container_new} className="w-full" style={{ height: "250vh" }}>
       <Purpose progress={scrollYProgress} />
     </main>
   );
@@ -82,7 +78,8 @@ function Purpose({ progress }) {
   return (
     <div
       ref={container1}
-      className="bg-[#F5F5F5] sticky top-0 w-full py-[90px] 1280:py-[40px] 1600:pt-[80px] 1920:py-[90px] 1920:h-[750px] 1600:h-[750px] 1280:h-[640px] overflow-hidden"
+      // className="bg-[#F5F5F5] sticky top-0 w-full py-[90px] 1280:py-[40px] 1600:pt-[80px] 1920:py-[90px] 1920:h-[750px] 1600:h-[750px] 1280:h-[640px] overflow-hidden"
+      className="bg-[#F5F5F5] sticky top-0 w-full 1280:pt-[60px] 1440:pt-[100px] 1920:pt-[220px] 1920:h-[950px] 1440:h-[750px] 1280:h-[680px] overflow-hidden"
     >
       <motion.div>
         <div className="relative fix">

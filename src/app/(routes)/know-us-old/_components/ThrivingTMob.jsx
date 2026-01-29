@@ -122,7 +122,7 @@ const ThrivingMobile = ({ activeCard, handleCardClick }) => {
         className={`cursor-pointer border-t border-r flex justify-end pr-0 pt-2 relative aspect-square w-full max-w-[260px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] transition-all duration-300 mr-0 ml-auto ${
           activeCard === 1
             ? "bg-[#f47920] border-[#f47920]"
-            : "border-[#BFBFBF] bg-white pr-2"
+            : "border-[#BFBFBF] bg-[#f5f5f5] pr-2"
         }`}
         onClick={() => handleCardClick(1)}
       >
@@ -161,7 +161,7 @@ const ThrivingMobile = ({ activeCard, handleCardClick }) => {
         ${
           activeCard === 2
             ? "bg-[#0db14b] border-[#0db14b]"
-            : "border-[#BFBFBF] bg-white pr-2"
+            : "border-[#BFBFBF] bg-[#f5f5f5] pr-2"
         }`}
         onClick={() => handleCardClick(2)}
       >
@@ -200,7 +200,7 @@ const ThrivingMobile = ({ activeCard, handleCardClick }) => {
         ${
           activeCard === 3
             ? "bg-[#8F53A1] border-[#8F53A1]"
-            : "border-[#BFBFBF] bg-white pr-2"
+            : "border-[#BFBFBF] bg-[#f5f5f5] pr-2"
         }`}
         onClick={() => handleCardClick(3)}
       >

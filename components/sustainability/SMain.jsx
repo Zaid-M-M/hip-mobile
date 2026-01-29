@@ -12,12 +12,14 @@ import VMmainF from "./visionmission/VMmainF";
 import CMainF from "./cardstack/CMainF";
 import Graph from "./graph/Graph";
 import GraphMain from "./graph/GraphMain";
+import VMMob from "./visionmission/VMMob";
 
 const SMain = () => {
   return (
     <div>
       <SHMain />
       <VMmainF />
+      <VMMob />
       <CMainF />
       <UNSDGMain />
       <IMPMain />

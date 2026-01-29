@@ -242,7 +242,7 @@ export const getLink = (item) => {
         return `/case-studies/${slug}`;
       case "incity_parks":
         return `/incity-centers/${slug}`;
-      case "posts":
+      case "post":
         return `/blog/${slug}`;
       case "media_news":
         return `/news/${slug}`;
@@ -435,7 +435,7 @@ export const renderPageButtons = (page, totalPages, goToPage) => {
         }`}
       >
         {i}
-      </button>
+      </button>,
     );
   }
 
@@ -444,13 +444,13 @@ export const renderPageButtons = (page, totalPages, goToPage) => {
     items.push(
       <button key="1" onClick={() => goToPage(1)} className={baseClass}>
         1
-      </button>
+      </button>,
     );
     if (start > 2)
       items.push(
         <span key="left-ellipsis" className="lg:px-2 px-0 py-1">
           …
-        </span>
+        </span>,
       );
   }
   items.push(...buttons);
@@ -459,7 +459,7 @@ export const renderPageButtons = (page, totalPages, goToPage) => {
       items.push(
         <span key="right-ellipsis" className="lg:px-2 px-0 py-1">
           …
-        </span>
+        </span>,
       );
     items.push(
       <button
@@ -468,7 +468,7 @@ export const renderPageButtons = (page, totalPages, goToPage) => {
         className={baseClass}
       >
         {totalPages}
-      </button>
+      </button>,
     );
   }
   return items;
