@@ -422,7 +422,8 @@ const menuLinks = {
   ],
   Insights: [
     { text: "Media", url: "/media/" },
-    { text: "Case Studies & Testimonials", url: "/case-studies/" },
+    { text: "Case Studies and Client Testimonials", url: "/case-studies/" },
+    // { text: "Client Testimonials", url: "/case-studies/#client-testimonials" },
   ],
   "Sustainability & Impact": [
     { text: "Sustainability Overview", url: "/sustainability/" },
@@ -437,7 +438,19 @@ const menuLinks = {
     // { text: "Investor Resources", url: "/investor-resources" },
   ],
   "Explore Horizon": [
-    { text: "Know Us", url: "/know-us/" },
+    {
+      text: "Know Us",
+      subLinks: [
+        { text: "Overview", url: "/know-us/#know-us" },
+        { text: "Values, Mission & Vision", url: "/know-us/#mission-vision" },
+        { text: "Key Milestones", url: "/know-us/#key-milestones" },
+        { text: "Board of Directors", url: "/know-us/#board-of-directors" },
+        { text: "Board Committees", url: "/know-us/#board-committees" },
+        { text: "Leadership", url: "/know-us/#leadership" },
+        { text: "Career", url: "/know-us/#career" },
+        { text: "Awards", url: "/know-us/#awards" },
+      ],
+    },
     { text: "Culture", url: "/culture/" },
     { text: "Contact Us", url: "/contact/" },
   ],

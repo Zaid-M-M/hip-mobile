@@ -28,7 +28,7 @@ export default function NewAwardSlider({ awards }) {
           : [award.images];
 
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="pr-[1px]">
             <div className="w-full h-[500px] relative bg-white border border-[#CDCDCD] overflow-hidden">
               <img
                 src="/brand_journey/cardel.svg"

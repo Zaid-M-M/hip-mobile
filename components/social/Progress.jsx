@@ -4,7 +4,8 @@ const Progress = () => {
   return (
     <div className="relative overflow-y-hidden overflow-x-hidden">
       <div className="fixup">
-        <div className="flex flex-col gap-[25px] 1024:flex-row items-center justify-center w-full xl:py-24 py-12 bg-cover bg-center">
+        {/* <div className="flex flex-col gap-[25px] 1024:flex-row items-center justify-center w-full xl:py-24 py-12 bg-cover bg-center"> */}
+        <div className="flex flex-col gap-[25px] 1024:flex-row items-center justify-center w-full xl:pt-24 xl:pb-24 pt-12 bg-cover bg-center">
           <div className="w-full  1024:-mt-24 1280:-mt-12 1366:-mt-0 1024:w-1/2 flex flex-col items-start gap-[12px] 1024:gap-[16px] 1280:gap-[20px]">
             <div>
               <h2 className="bw-m text-[35px] leading-[42px] 768:text-[45px] 768:leading-[55px] 1280:text-[56px] 1280:leading-[66px] 1366:text-[64px] 1366:leading-[74px] tracking-[-1.92px] 1280:tracking-[-2.24px] 1366:tracking-[-3.04px]">

@@ -12,7 +12,7 @@ const awards = [
     title: "Fastest Growing Industrial & Logistics Park",
     subtitle: "15th Express Logistics & Supply Chain Awards 2023",
     description:
-      "Awarded for rapid growth and establishing India's largest in-city Grade A logistics network. Leadership in developing high-performance logistics ecosystems",
+      "Awarded for rapid growth and establishing India’s largest in-city Grade A logistics network. Leadership in developing high-performance logistics ecosystems",
     images: ["/brand_journey/awards/2023/fast_growing_2023.png"],
   },
   {
@@ -77,55 +77,67 @@ const awards = [
   },
   {
     year: 2025,
-    title: "Realty+ Conclave & Excellence Awards South 2025",
-    subtitle:
-      "Horizon Recognised as Developer of the Year – Industrial & Warehousing",
+    title: "Developer of the Year – Industrial & Warehousing (South)",
+    subtitle: "Realty+ Conclave & Excellence Awards 2025",
     description:
-      "Horizon Industrial Parks was honoured as the Developer of the Year – Industrial & Warehousing at the Realty+ Conclave & Excellence Awards South 2025; We are also delighted to receive the Warehousing Project of the Year award for Horizon Industrial Park Hosur, recognised for its  customer-centric design and facilities built for operational excellence.",
-    images: [
-      "/brand_journey/awards/2025/Realty_awd1.png",
-      "/brand_journey/awards/2025/Realty_awd2.png",
-    ],
+      "Recognised for leadership in delivering Grade-A, ESG-compliant industrial and warehousing developments, setting new benchmarks across Southern India.",
+    images: ["/brand_journey/awards/2025/Realty_awd2.png"],
   },
   {
     year: 2025,
-    title: "CII SCALE Awards 2025",
-    subtitle:
-      "Horizon Recognised as Leader in Essential Industrial Infrastructure",
+    title: "Industrial / Warehousing Park of the Year (South)",
+    subtitle: "Realty+ Conclave & Excellence Awards 2025",
     description:
-      "Horizon Industrial Parks was honoured as the Leader in Essential Industrial Infrastructure at the 12th CII SCALE Awards 2025. This recognition highlights our commitment to delivering institutional-grade, future-ready industrial and logistics infrastructure that powers India's manufacturing growth and strengthens nationwide supply-chain resilience. Horizon's capability in executing complex technical requirements, has positioned us as the partner of choice for essential industrial infrastructure.",
+      "Horizon Industrial Park Hosur honoured for customer-centric design, operational efficiency, and high-performance infrastructure, establishing a benchmark warehousing.",
+    images: ["/brand_journey/awards/2025/Realty_awd1.png"],
+  },
+  {
+    year: 2025,
+    title: "Leader in Essential Industrial Infrastructure ",
+    subtitle: "CII SCALE Awards 2025",
+    description:
+      "Recognised for advancing institutional-grade, future-ready industrial and logistics infrastructure supporting India’s manufacturing and supply-chain ecosystem.",
     images: ["/brand_journey/awards/2025/CII_Scale_25.png"],
   },
   {
     year: 2025,
-    title: "IGBC Green Building Congress 2025",
-    subtitle:
-      "Horizon Bilaspur Wins IGBC Performance Challenge Award – Warehouse Category",
+    title: "IGBC Performance Challenge Award – Warehouse Category",
+    subtitle: "IGBC Green Building Congress 2025",
     description:
-      "Horizon Industrial Park Bilaspur has been honoured with the IGBC Performance Challenge Award in the Warehouse Category at the IGBC Green Building Congress 2025. This recognition highlights the park's role as a benchmark for responsible, future-ready industrial infrastructure reflecting Horizon's commitment to building high-performance, climate-conscious industrial ecosystems where growth and sustainability progress together.",
+      "Horizon Industrial Park Bilaspur honoured for setting benchmarks in sustainable, high-performance warehouse standards supporting climate-conscious industrial infrastructure.",
     images: ["/brand_journey/awards/2025/IGBC_green_cong_25.png"],
   },
   {
     year: 2025,
-    title: "CII Performance Excellence Awards 2025",
-    subtitle: "Horizon Recognised for Sustainability Leadership",
-    description: `Horizon Industrial Parks was honoured with the "Leadership in Performance" recognition at the CII Performance Excellence Awards 2025 for Solar, Wind & Hybrid Plants. Our 486 kWp rooftop solar plant at Chakan II – Block A was recognised for its consistent operational excellence, sustainability benchmarks, and strong on-ground performance.`,
+    title: "Leadership in Performance – Sustainability",
+    subtitle: "CII Performance Excellence Awards 2025",
+    description:
+      "Horizon Industrial Park Chakan II recognised for operational excellence in renewable energy integration, demonstrating performance, reliability, and sustainability leadership.",
     images: ["/brand_journey/awards/2025/cci_performance_award_25.png"],
   },
   {
     year: 2025,
-    title: "Realty+ Conclave Excellence Awards 2025",
-    subtitle: "Horizon Recognised for Industry Leadership",
-    description: `Horizon Industrial Park Bhayala was honoured as the "Industrial / Warehousing Project of the Year – West Zone". The built-to-suit factory developed by Horizon at Bhayala park for a global aseptic carton packaging manufacturing company, stood out as the project of the year, for its world-class industrial infrastructure.`,
+    title: "Industrial / Warehousing Project of the Year – (West)",
+    subtitle: "Realty+ Conclave Excellence Awards 2025",
+    description:
+      "Horizon Industrial Park Bhayala awarded for delivering a world-class built-to-suit industrial facility, exemplifying engineering excellence, scalability, and performance",
     images: ["/brand_journey/awards/2025/Bhayala_award_25.png"],
   },
   {
     year: 2025,
-    title: "Realty+ Excellence Awards 2025",
-    subtitle:
-      "Horizon Crowned Developer of the Year – Industrial & Warehousing (North)",
-    description: `Horizon Industrial Parks was honoured as the "Developer of the Year – Industrial & Warehousing" at the Realty+ Conclave & Excellence Awards 2025 (North). The recognition underscores Horizon's leadership in delivering Grade-A, ESG-compliant, and future-ready industrial and logistics infrastructure across India`,
+    title: "Developer of the Year – Industrial & Warehousing (North)",
+    subtitle: "Realty+ Excellence Awards 2025",
+    description:
+      "Recognised for excellence in developing future-ready, Grade-A industrial and logistics parks, reinforcing leadership across Northern India.",
     images: ["/brand_journey/awards/2025/Industrial_north_award_25.png"],
   },
+  // {
+  //   year: 2025,
+  //   title: "GRI Global Awards 2025",
+  //   subtitle: "Horizon Recognised for Global Industrial Excellence",
+  //   description:
+  //     "Horizon Industrial Parks has been recognised among the top three industrial and logistics developments globally at the GRI Global Awards 2025. This acknowledgement reflects our commitment to building Grade-A, sustainable, and future-ready industrial ecosystems. The recognition of our Farukhnagar II development underscores Horizon’s continued leadership in shaping high-performance logistics infrastructure that meets global benchmarks in innovation, sustainability, and impact.",
+  //   images: ["/brand_journey/award_img.png"],
+  // },
 ];
 export default awards;

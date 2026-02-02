@@ -3,7 +3,10 @@ import TimelineSection from "./TimelineSection";
 
 const Milestone = () => {
   return (
-    <div className="relative flex  py-10 sm:py-10 1024:pt-[80px] bg-black ">
+    <div
+      id="key-milestones"
+      className="relative scroll-mt-[70px] flex  py-10 sm:py-10 1024:pt-[80px] bg-black "
+    >
       {/* <img
         src="/know-us/milebg.png"
         className="absolute top-6 1280:right-[150px] 1280:w-[749px] 1280:h-[719px] right-[5%] w-[60vw] z-10 h-auto"

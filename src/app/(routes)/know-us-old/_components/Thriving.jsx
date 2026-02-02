@@ -17,7 +17,10 @@ const Thriving = () => {
       {/* <img className="purple_vctr block md:hidden absolute top-[-80px] right-[20px]  md:w-[350px] w-[300px]" src='/purple_vector.svg' />
       <img className="orange_vctr block md:hidden absolute top-[-100px] right-[-100px]  md:w-[350px] w-[300px]" src='/orange_vector.svg' /> */}
 
-      <div className="fix w-full xl:pb-[20px] 1440:pb-[100px] py-[45px] 768:py-[70px] px-0 overflow-hidden">
+      <div
+        id="career"
+        className="fix scroll-mt-[90px] w-full xl:pb-[20px] 1440:pb-[100px] py-[45px] 768:py-[70px] px-0 overflow-hidden"
+      >
         <div className="flex w-full flex-col justify-between sm:flex-row 1280:gap-8">
           {/* Left Column */}
           <div className="w-full sm:w-[40%]  1366:w-1/2 flex flex-col gap-[25px] md:gap-[24px] lg:gap-[44px] relative">

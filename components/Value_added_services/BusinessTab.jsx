@@ -48,9 +48,52 @@ const businessTabs = [
   },
 ];
 
+/* -------------------- ICONS (FROM AccMob) -------------------- */
+const PlusIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 12 12" fill="none">
+    <defs>
+      <linearGradient
+        id="gradPlus"
+        x1="0"
+        y1="0"
+        x2="12"
+        y2="0"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#AC38D9" />
+        <stop offset="100%" stopColor="#F47922" />
+      </linearGradient>
+    </defs>
+    <rect x="5.28" y="1.2" width="1.44" height="9.6" fill="url(#gradPlus)" />
+    <rect x="1.2" y="5.28" width="9.6" height="1.44" fill="url(#gradPlus)" />
+  </svg>
+);
+
+const MinusIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 12 12" fill="none">
+    <defs>
+      <linearGradient
+        id="gradMinus"
+        x1="0"
+        y1="0"
+        x2="12"
+        y2="0"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#AC38D9" />
+        <stop offset="100%" stopColor="#F47922" />
+      </linearGradient>
+    </defs>
+    <rect x="1.2" y="5.28" width="9.6" height="1.44" fill="url(#gradMinus)" />
+  </svg>
+);
+
+
 const BusinessTab = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [mobileActive, setMobileActive] = useState(0);
+
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // ✅ Preload all tab images on mount
   useEffect(() => {
@@ -117,14 +160,13 @@ const BusinessTab = () => {
       </div>
 
       {/* Mobile Dropdown */}
-      <div className="w-full fixup 1024:hidden mt-4 relative">
+      {/* <div className="w-full fixup 1024:hidden mt-4 relative">
         <button
           onClick={() => setDropdownOpen((prev) => !prev)}
           className="w-full border-0 border-b border-[#CDCDCD] mb-6 mt-12 py-3 px-2 bg-white text-black flex justify-between items-center rounded-none"
         >
           <span>{businessTabs[activeTab].title}</span>
 
-          {/* Animated Chevron */}
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -143,7 +185,6 @@ const BusinessTab = () => {
           </motion.svg>
         </button>
 
-        {/* Smooth Animated Dropdown */}
         <AnimatePresence>
           {dropdownOpen && (
             <motion.div
@@ -171,7 +212,7 @@ const BusinessTab = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div> */}
 
       {/* Tab Content - Desktop */}
       <div className="mt-[60px] hidden lg:flex lg:flex-row gap-5 lg:gap-[60px] w-full">
@@ -219,7 +260,7 @@ const BusinessTab = () => {
       </div>
 
       {/* Tab Content - Mobile */}
-      <div className="mt-[50px] flex fixup flex-col lg:hidden gap-5 lg:gap-[60px] w-full">
+      {/* <div className="mt-[50px] flex fixup flex-col lg:hidden gap-5 lg:gap-[60px] w-full">
         <motion.div
           key={activeTab}
           initial={{ opacity: 0 }}
@@ -227,7 +268,7 @@ const BusinessTab = () => {
           transition={{ duration: 1 }}
           className="flex flex-col 1024:pl-[max(5%,calc((100vw-1340px)/2))] lg:flex-row gap-5 bg-black relative"
         >
-          {/* Text */}
+   
           <div className="lg:w-[45%]">
             <h3 className="lg:text-[32px] text-[24px] bw-m mb-4 text-white">
               {businessTabs[activeTab].title}
@@ -249,7 +290,7 @@ const BusinessTab = () => {
             )}
           </div>
 
-          {/* Image */}
+  
           <div className="lg:w-[55%] flex relative justify-start">
             <Image
               src={businessTabs[activeTab].image}
@@ -261,7 +302,65 @@ const BusinessTab = () => {
             />
           </div>
         </motion.div>
+      </div> */}
+
+   {/* -------------------- MOBILE ACCORDION (NEW) -------------------- */}
+      <div className="lg:hidden relative z-20 px-[5%] mt-4 w-full">
+        {businessTabs.map((tab, i) => {
+          const isActive = mobileActive === i;
+
+          return (
+            <div key={tab.id} className="border-b border-gray-600 py-3">
+              <button
+                onClick={() =>
+                  setMobileActive((prev) => (prev === i ? null : i))
+                }
+                className="w-full flex items-center gap-3 text-left"
+              >
+                {isActive ? <MinusIcon /> : <PlusIcon />}
+                <h3 className="text-white text-[18px]">{tab.title}</h3>
+              </button>
+
+              <AnimatePresence>
+                {isActive && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="overflow-hidden mt-4"
+                  >
+                    
+
+                    {tab.description.map((p, i) => (
+                      <p key={i} className="text-white mb-3">
+                        {p}
+                      </p>
+                    ))}
+{/* 
+                    <Image
+                      src={tab.image}
+                      alt={tab.title}
+                      width={600}
+                      height={400}
+                      className="w-full  object-contain mb-4"
+                    /> */}
+
+                    {tab.btnText && (
+                      <Btn
+                        text={tab.btnText}
+                        href={tab.btnLink}
+                        className="mt-3 !pl-0"
+                      />
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          );
+        })}
       </div>
+
     </div>
   );
 };

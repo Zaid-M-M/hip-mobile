@@ -29,7 +29,7 @@ export const socialTabsData = [
     video: "https://player.vimeo.com/video/1141076912",
     description: `Through regular tenant engagement programs, health camps, safety drills, and festive gatherings, we build a sense of belonging. Feedback loops ensure tenant voices are heard and acted on—making each park a collaborative and caring ecosystem.`,
     btnLabel: "explore Event",
-    btnLink: "/explore-event",
+    btnLink: "/media/?tab=events",
   },
   {
     label: "Community Impact",
@@ -50,6 +50,6 @@ export const socialTabsData = [
     video: "https://player.vimeo.com/video/1141058188",
     description: `With 19% women across our teams and counting, and 33% in leadership, and 2% PWD employees, we walk the talk on inclusion. We partner with NGOs for inclusive hiring, provide comprehensive training on DEI, and ensure our workplace is safe, respectful, and welcoming to them.`,
     btnLabel: "Career",
-    btnLink: "/career",
+    btnLink: "/culture/",
   },
 ];

@@ -336,7 +336,7 @@ export default function VMMob() {
   const missionMaxH = useTransform(
     scrollYProgress,
     [0, 0.45],
-    [COLLAPSED, EXPANDED + 100],
+    [COLLAPSED, EXPANDED + 300],
   );
   const missionOpacity = useTransform(scrollYProgress, [0, 0.45], [0, 1]);
   const missionBg = useTransform(
@@ -353,9 +353,9 @@ export default function VMMob() {
   return (
     <div
       ref={containerRef}
-      className="relative lg:hidden h-[200vh] bg-[#F5F5F5]"
+      className="relative lg:hidden min-h-[200vh] bg-[#F5F5F5]"
     >
-      <div className="sticky top-[70px] px-[5%] py-6 overflow-hidden">
+      <div className="sticky top-[70px] px-[5%] py-6 overflow-hidden min-h-fit">
         <div className="flex flex-col gap-[10px]">
           {/* ESG VISION CARD */}
           <motion.div
@@ -452,7 +452,7 @@ export default function VMMob() {
 
             <img
               src="/sustainability/stones.jpg"
-              className="w-full h-[220px] object-cover"
+              className="w-full h-[290px] object-cover"
               alt="Mission"
             />
           </motion.div>

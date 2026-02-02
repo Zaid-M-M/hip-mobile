@@ -34,6 +34,21 @@ const TopDropF = ({
     };
   }, []);
 
+  // const getTargetHeight = () => {
+  //   if (!isNavOpen) return 0;
+  //   if (openIndex === null) return 150; // default open height
+  //   return isLargeScreen
+  //     ? openIndex === 0
+  //       ? 600
+  //       : openIndex === 1
+  //       ? 530
+  //       : 260
+  //     : openIndex === 0
+  //     ? 600
+  //     : openIndex === 1
+  //     ? 530
+  //     : 220; // Network = 530px, others = 220px
+  // };
   const getTargetHeight = () => {
     if (!isNavOpen) return 0;
     if (openIndex === null) return 150; // default open height
@@ -41,13 +56,15 @@ const TopDropF = ({
       ? openIndex === 0
         ? 600
         : openIndex === 1
-        ? 530
-        : 260
+          ? 530
+          : openIndex === 6
+            ? 440
+            : 260
       : openIndex === 0
-      ? 600
-      : openIndex === 1
-      ? 530
-      : 220; // Network = 530px, others = 220px
+        ? 600
+        : openIndex === 1
+          ? 530
+          : 220; // Network = 530px, others = 220px
   };
   return (
     <motion.div

@@ -32,12 +32,14 @@ const BrandJrnyWrapper = () => {
         <TeamSecF />
         <Thriving />
         {/* Desktop Awards */}
-        <div className="hidden xl:block">
-          <Awards />
-        </div>
-        {/* Mobile Awards */}
-        <div className="block xl:hidden">
-          <AwardsMobile />
+        <div id="awards" className="scroll-mt-[90px]">
+          <div className="hidden xl:block">
+            <Awards />
+          </div>
+          {/* Mobile Awards */}
+          <div className="block xl:hidden">
+            <AwardsMobile />
+          </div>
         </div>
       </ReactLenis>
     </div>

@@ -17,7 +17,10 @@ const BJ_Sec1 = () => {
           src="/orange_vector.svg"
         />
 
-        <div className="relative w-full  overflow-hidden fix pt-[45px] md:pt[80px] lg:pt[100px]  pb-[30px] md:pb[55px] 1440:pb-[70px]  1280:pb-[50px]">
+        <div
+          id="know-us"
+          className="relative w-full  overflow-hidden fix pt-[45px] md:pt[80px] lg:pt[100px]  pb-[30px] md:pb[55px] 1440:pb-[70px]  1280:pb-[50px]"
+        >
           <div className="bw-m bg-[#F7F7F7] border-[1px] border-[#E3E3E3] px-[8px] py-[3px]  md:px-[10px] md:py-[7px] w-[fit-content]  mb-[10px]">
             <a href="#" className="text-[13px] md:text-[13px]">
               Home

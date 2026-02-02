@@ -17,7 +17,7 @@ const SocialTabContent = ({ tabs, activeTab }) => {
     setIsPlaying(!isPlaying);
   };
   return (
-    <div className="w-full h-fit mt-8">
+    <div className="w-full h-fit mt-8 hidden lg:block">
       <AnimatePresence mode="wait">
         {tabs
           .filter((tab) => tab.title === activeTab)
@@ -40,7 +40,6 @@ const SocialTabContent = ({ tabs, activeTab }) => {
                     className="w-full h-full"
                   ></iframe>
                 </div>
-
               </div>
 
               {/* Right description */}

@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import OverView from "../megamenu/overview/OverView";
 import TransitionLink from "@/src/app/TransitionLink";
 import CapOverView from "../megamenu/CapOverView";
+import KnowUsOverView from "../megamenu/KnowUsOverView";
 
 const menuItems = [
   "Network",
@@ -18,9 +19,8 @@ const menuItems = [
 
 export const menuLinks = {
   "Explore Horizon": [
-    { text: "Know Us", url: "/know-us/" },
     { text: "Culture", url: "/culture/" },
-    { text: "Contact Us", url: "/contact/" },
+    { text: "Contact", url: "/contact/" },
   ],
   Capabilities: [
     {
@@ -67,7 +67,8 @@ export const menuLinks = {
   ],
   Insights: [
     { text: "Media", url: "/media/" },
-    { text: "Case Studies & Testimonials", url: "/case-studies/" },
+    { text: "Case Studies and Client Testimonials", url: "/case-studies/" },
+    // { text: "Client Testimonials", url: "/case-studies/#client-testimonials" },
   ],
   "Sustainability & Impact": [
     { text: "Sustainability Overview", url: "/sustainability/" },
@@ -149,6 +150,11 @@ const HoverDrop = ({
                 />
               ) : menuItems[openIndex] === "Network" ? (
                 <OverView isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+              ) : menuItems[openIndex] === "Explore Horizon" ? (
+                <KnowUsOverView
+                  isNavOpen={isNavOpen}
+                  setIsNavOpen={setIsNavOpen}
+                />
               ) : (
                 <div className="flex 1440:mx-0 mx-[max(5%,calc((100vw-1340px)/2))] gap-5 pt-0 pb-5 1440:pt-5 1440:pb-10">
                   {getLinksForMenu(menuItems[openIndex]).map((link, i) => (

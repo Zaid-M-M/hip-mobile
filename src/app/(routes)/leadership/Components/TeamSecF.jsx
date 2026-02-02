@@ -206,10 +206,783 @@
 // };
 
 // export default TeamSecF;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
 
+// import React, { useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import clsx from "clsx";
+// import TeamSecDirectors from "./TeamSecDirectors";
+// import TeamSecCommittees from "./TeamSecCommittees";
+// import TeamSecLeadership from "./TeamSecLeadership";
+
+// const TeamSecF = () => {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   const tabs = ["Board of Directors", "Board Committees", "Leadership Team"];
+//   const tabsMob = [
+//     <>
+//       Board of <br /> Directors
+//     </>,
+//     <>
+//       Board <br /> Committees
+//     </>,
+//     <>
+//       Leadership <br /> Team
+//     </>,
+//   ];
+
+//   return (
+//     <div
+//       id="board-of-directors board-committees leadership"
+//       className="overflow-visible relative"
+//     >
+//       <img
+//         className="purple_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[0px] md:top-[0px] lg:top-[-120px] xl:left-[-50px] 1920:left-[0px]"
+//         src="/purple_vector.svg"
+//       />
+//       <img
+//         className="green_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[-80px] md:top-[0px] lg:top-[-120px] xl:left-[200px] 1920:left-[200px]"
+//         src="/green_vector.svg"
+//       />
+
+//       <div className="fix pt-[0px] py-[20px] xl:py-[70px]">
+//         <div className="flex justify-between items-center flex-col lg:flex-row md:mb-[55px] mb-[25px] md:gap-5 gap-[0px]">
+//           <div className="flex flex-col lg:w-auto w-full items-start">
+//             <div className="flex gap-[10px] md:gap-[17px] xl:mt-0 mt-5 items-center justify-start text-[#101828] font-[Barlow] w-full md:w-fit xl:h-[96px]">
+//               <motion.div
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="md:w-[auto] text-[35px] md:text-[45px] xl:text-[66px] overflow-hidden whitespace-nowrap bw-r tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px]"
+//               >
+//                 Leadership &
+//               </motion.div>
+//             </div>
+//             <div className="flex gap-[10px] md:gap-[17px]  items-center">
+//               <motion.h2
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="text-[#101828] overflow-hidden whitespace-nowrap w-full bw-m text-[35px] md:text-[45px] xl:text-[66px] md:tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px] xl:mt-[-15px]"
+//               >
+//                 Governance
+//               </motion.h2>
+//               <div className="xl:w-[auto] xl:h-[58px] md:w-[200px] md:h-[48px] w-[150px] overflow-hidden">
+//                 <motion.div
+//                   initial={{ width: 0 }}
+//                   whileInView={{ width: "100%" }}
+//                   transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                   viewport={{ amount: 0.25, once: true }}
+//                 >
+//                   <img
+//                     src="/abstract_pattern.svg"
+//                     className="abstract_svg"
+//                     alt=""
+//                   />
+//                 </motion.div>
+//               </div>
+//             </div>
+//           </div>
+//           {/* <motion.div
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1], delay: 0.4 }}
+//             viewport={{ amount: 0.25, once: true }}
+//             className="flex items-end md:w-fit min-h-full"
+//           >
+//             <p className="text-black bw-r md:text-[22px] leading-[150%] lg:max-w-xl sm:mt-2 md:mt-5 mt-[15px]">
+//               We see things differently, proactively find opportunities with an
+//               agile team, and create exceptional value for our customers,
+//               partners, and employees.
+//             </p>
+//           </motion.div> */}
+//         </div>
+
+//         {/* MATCHED TABS STYLING */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:grid hidden grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabs.map((tab, i) => {
+//             const isActive = i === activeTab;
+
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:block hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>{" "}
+//                 <AnimatePresence mode="wait" initial={false}>
+//                   {isActive && (
+//                     <motion.img
+//                       key={`active-icon-${i}`}
+//                       initial={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       animate={{ y: 0, x: 0, opacity: 1 }}
+//                       exit={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                       src="/whiteexternal.svg"
+//                       alt="Active"
+//                       className="w-[39px] xl:flex hidden"
+//                     />
+//                   )}
+//                 </AnimatePresence>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+//         {/* MATCHED TABS STYLING */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:hidden grid grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabsMob.map((tab, i) => {
+//             const isActive = i === activeTab;
+
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:block hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>{" "}
+//                 <AnimatePresence mode="wait" initial={false}>
+//                   {isActive && (
+//                     <motion.img
+//                       key={`active-icon-${i}`}
+//                       initial={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       animate={{ y: 0, x: 0, opacity: 1 }}
+//                       exit={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                       src="/whiteexternal.svg"
+//                       alt="Active"
+//                       className="w-[39px] xl:flex hidden"
+//                     />
+//                   )}
+//                 </AnimatePresence>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+
+//         {/* Tab Content */}
+//         <div className="relative w-full">
+//           {activeTab === 0 && <TeamSecDirectors />}
+//           {activeTab === 1 && (
+//             <TeamSecCommittees
+//               cellPy="px-2 py-[15px]!"
+//               cellWidth="xl:grid-cols-[370px_1fr_370px] grid-cols-[0.5fr_1fr_0.5fr]"
+//             />
+//           )}
+//           {activeTab === 2 && <TeamSecLeadership />}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TeamSecF;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import clsx from "clsx";
+// import TeamSecDirectors from "./TeamSecDirectors";
+// import TeamSecCommittees from "./TeamSecCommittees";
+// import TeamSecLeadership from "./TeamSecLeadership";
+
+// const TeamSecF = () => {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   const tabs = ["Board of Directors", "Board Committees", "Leadership Team"];
+//   const tabsMob = [
+//     <>
+//       Board of <br /> Directors
+//     </>,
+//     <>
+//       Board <br /> Committees
+//     </>,
+//     <>
+//       Leadership <br /> Team
+//     </>,
+//   ];
+
+//   useEffect(() => {
+//     const handleHashChange = () => {
+//       const hash = window.location.hash;
+//       if (hash === "#board-of-directors") {
+//         setActiveTab(0);
+//       } else if (hash === "#board-committees") {
+//         setActiveTab(1);
+//       } else if (hash === "#leadership") {
+//         setActiveTab(2);
+//       }
+//     };
+
+//     handleHashChange(); // Run on mount
+//     window.addEventListener("hashchange", handleHashChange);
+//     return () => window.removeEventListener("hashchange", handleHashChange);
+//   }, []);
+
+//   return (
+//     <div id="" className="overflow-visible relative">
+//       <span id="board-of-directors" />
+//       <span id="board-committees" />
+//       <span id="leadership" />
+//       <img
+//         className="purple_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[0px] md:top-[0px] lg:top-[-120px] xl:left-[-50px] 1920:left-[0px]"
+//         src="/purple_vector.svg"
+//       />
+//       <img
+//         className="green_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[-80px] md:top-[0px] lg:top-[-120px] xl:left-[200px] 1920:left-[200px]"
+//         src="/green_vector.svg"
+//       />
+
+//       <div className="fix pt-[20px] py-[50px] xl:py-[70px]">
+//         <div className="flex justify-between items-center flex-col lg:flex-row md:mb-[55px] mb-[25px] md:gap-5 gap-[0px]">
+//           <div className="flex flex-col lg:w-auto w-full items-start">
+//             <div className="flex gap-[10px] md:gap-[17px] xl:mt-0 mt-5 items-center justify-start text-[#101828] font-[Barlow] w-full md:w-fit xl:h-[96px]">
+//               <motion.div
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="md:w-[auto] text-[35px] md:text-[45px] xl:text-[66px] overflow-hidden whitespace-nowrap bw-r tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px]"
+//               >
+//                 Leadership &
+//               </motion.div>
+//             </div>
+//             <div className="flex gap-[10px] md:gap-[17px]  items-center">
+//               <motion.h2
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="text-[#101828] overflow-hidden whitespace-nowrap w-full bw-m text-[35px] md:text-[45px] xl:text-[66px] md:tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px] xl:mt-[-15px]"
+//               >
+//                 Governance
+//               </motion.h2>
+//               <div className="xl:w-[auto] xl:h-[58px] md:w-[200px] md:h-[48px] w-[150px] overflow-hidden">
+//                 <motion.div
+//                   initial={{ width: 0 }}
+//                   whileInView={{ width: "100%" }}
+//                   transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                   viewport={{ amount: 0.25, once: true }}
+//                 >
+//                   <img
+//                     src="/abstract_pattern.svg"
+//                     className="abstract_svg"
+//                     alt=""
+//                   />
+//                 </motion.div>
+//               </div>
+//             </div>
+//           </div>
+//           {/* <motion.div
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1], delay: 0.4 }}
+//             viewport={{ amount: 0.25, once: true }}
+//             className="flex items-end md:w-fit min-h-full"
+//           >
+//             <p className="text-black bw-r md:text-[22px] leading-[150%] lg:max-w-xl sm:mt-2 md:mt-5 mt-[15px]">
+//               We see things differently, proactively find opportunities with an
+//               agile team, and create exceptional value for our customers,
+//               partners, and employees.
+//             </p>
+//           </motion.div> */}
+//         </div>
+
+//         {/* MATCHED TABS STYLING */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:grid hidden grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabs.map((tab, i) => {
+//             const isActive = i === activeTab;
+
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:block hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>{" "}
+//                 <AnimatePresence mode="wait" initial={false}>
+//                   {isActive && (
+//                     <motion.img
+//                       key={`active-icon-${i}`}
+//                       initial={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       animate={{ y: 0, x: 0, opacity: 1 }}
+//                       exit={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                       src="/whiteexternal.svg"
+//                       alt="Active"
+//                       className="w-[39px] xl:flex hidden"
+//                     />
+//                   )}
+//                 </AnimatePresence>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+//         {/* MATCHED TABS STYLING */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:hidden grid grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabsMob.map((tab, i) => {
+//             const isActive = i === activeTab;
+
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] lg:block hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>{" "}
+//                 <AnimatePresence mode="wait" initial={false}>
+//                   {isActive && (
+//                     <motion.img
+//                       key={`active-icon-${i}`}
+//                       initial={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       animate={{ y: 0, x: 0, opacity: 1 }}
+//                       exit={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                       src="/whiteexternal.svg"
+//                       alt="Active"
+//                       className="w-[39px] xl:flex hidden"
+//                     />
+//                   )}
+//                 </AnimatePresence>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+
+//         {/* Tab Content */}
+//         <div className="relative w-full">
+//           {activeTab === 0 && <TeamSecDirectors />}
+//           {activeTab === 1 && (
+//             <TeamSecCommittees
+//               cellPy="px-2 py-[15px]!"
+//               cellWidth="xl:grid-cols-[370px_1fr_370px] grid-cols-[0.5fr_1fr_0.5fr]"
+//             />
+//           )}
+//           {activeTab === 2 && <TeamSecLeadership />}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TeamSecF;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "use client";
+
+// import React, { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import clsx from "clsx";
+// import TeamSecDirectors from "./TeamSecDirectors";
+// import TeamSecCommittees from "./TeamSecCommittees";
+// import TeamSecLeadership from "./TeamSecLeadership";
+
+// const TeamSecF = () => {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   const tabs = ["Board of Directors", "Board Committees", "Leadership Team"];
+//   const tabsMob = [
+//     <>
+//       Board of <br /> Directors
+//     </>,
+//     <>
+//       Board <br /> Committees
+//     </>,
+//     <>
+//       Leadership <br /> Team
+//     </>,
+//   ];
+
+//   useEffect(() => {
+//     const handleHashChange = () => {
+//       const hash = window.location.hash;
+//       if (hash === "#board-of-directors") {
+//         setActiveTab(0);
+//       } else if (hash === "#board-committees") {
+//         setActiveTab(1);
+//       } else if (hash === "#leadership") {
+//         setActiveTab(2);
+//       }
+//     };
+
+//     // Run on initial mount
+//     handleHashChange();
+
+//     // Listen for standard hash changes and back/forward navigation
+//     window.addEventListener("hashchange", handleHashChange);
+//     window.addEventListener("popstate", handleHashChange);
+
+//     /**
+//      * Because our TransitionLink uses pushState, the 'hashchange'
+//      * event isn't fired by the browser. We listen for clicks
+//      * and check the hash immediately after the click event processes.
+//      */
+//     const handleGlobalClick = () => {
+//       setTimeout(handleHashChange, 50);
+//     };
+//     window.addEventListener("click", handleGlobalClick);
+
+//     return () => {
+//       window.removeEventListener("hashchange", handleHashChange);
+//       window.removeEventListener("popstate", handleHashChange);
+//       window.removeEventListener("click", handleGlobalClick);
+//     };
+//   }, []);
+
+//   return (
+//     <div id="" className="overflow-visible relative">
+//       {/* Target Spans for Scrolling */}
+//       <span id="board-of-directors" className="absolute top-[-100px]" />
+//       <span id="board-committees" className="absolute top-[-100px]" />
+//       <span id="leadership" className="absolute top-[-100px]" />
+
+//       <img
+//         className="purple_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[0px] md:top-[0px] lg:top-[-120px] xl:left-[-50px] 1920:left-[0px]"
+//         src="/purple_vector.svg"
+//         alt=""
+//       />
+//       <img
+//         className="green_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[-80px] md:top-[0px] lg:top-[-120px] xl:left-[200px] 1920:left-[200px]"
+//         src="/green_vector.svg"
+//         alt=""
+//       />
+
+//       <div className="fix pt-[20px] py-[50px] xl:py-[70px]">
+//         <div className="flex justify-between items-center flex-col lg:flex-row md:mb-[55px] mb-[25px] md:gap-5 gap-[0px]">
+//           <div className="flex flex-col lg:w-auto w-full items-start">
+//             <div className="flex gap-[10px] md:gap-[17px] xl:mt-0 mt-5 items-center justify-start text-[#101828] font-[Barlow] w-full md:w-fit xl:h-[96px]">
+//               <motion.div
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="md:w-[auto] text-[35px] md:text-[45px] xl:text-[66px] overflow-hidden whitespace-nowrap bw-r tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px]"
+//               >
+//                 Leadership &
+//               </motion.div>
+//             </div>
+//             <div className="flex gap-[10px] md:gap-[17px] items-center">
+//               <motion.h2
+//                 initial={{ width: 0 }}
+//                 whileInView={{ width: "fit-content" }}
+//                 transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                 viewport={{ amount: 0.25, once: true }}
+//                 className="text-[#101828] overflow-hidden whitespace-nowrap w-full bw-m text-[35px] md:text-[45px] xl:text-[66px] md:tracking-[-2.64px] xl:leading-[76px] leading-[45px] md:leading-[55px] xl:mt-[-15px]"
+//               >
+//                 Governance
+//               </motion.h2>
+//               <div className="xl:w-[auto] xl:h-[58px] md:w-[200px] md:h-[48px] w-[150px] overflow-hidden">
+//                 <motion.div
+//                   initial={{ width: 0 }}
+//                   whileInView={{ width: "100%" }}
+//                   transition={{ duration: 1, ease: [0.7, 0, 0.4, 1] }}
+//                   viewport={{ amount: 0.25, once: true }}
+//                 >
+//                   <img
+//                     src="/abstract_pattern.svg"
+//                     className="abstract_svg"
+//                     alt=""
+//                   />
+//                 </motion.div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* DESKTOP TABS */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:grid hidden grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabs.map((tab, i) => {
+//             const isActive = i === activeTab;
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>
+//                 <AnimatePresence mode="wait" initial={false}>
+//                   {isActive && (
+//                     <motion.img
+//                       key={`active-icon-${i}`}
+//                       initial={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       animate={{ y: 0, x: 0, opacity: 1 }}
+//                       exit={{ y: "100%", x: "-100%", opacity: 0 }}
+//                       transition={{ duration: 0.3, ease: [0.7, 0, 0.4, 1] }}
+//                       src="/whiteexternal.svg"
+//                       alt="Active"
+//                       className="w-[39px] xl:flex hidden"
+//                     />
+//                   )}
+//                 </AnimatePresence>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+
+//         {/* MOBILE TABS */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+//           viewport={{ once: true, amount: 0.2 }}
+//           className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:hidden grid grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+//         >
+//           {tabsMob.map((tab, i) => {
+//             const isActive = i === activeTab;
+//             return (
+//               <motion.button
+//                 key={i}
+//                 onClick={() => setActiveTab(i)}
+//                 initial={false}
+//                 animate={{
+//                   backgroundImage: isActive
+//                     ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+//                     : "linear-gradient(to right, #ffffff, #ffffff)",
+//                 }}
+//                 transition={{ duration: 0.4, ease: "easeInOut" }}
+//                 className={clsx(
+//                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+//                 )}
+//               >
+//                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+//                   <motion.h2
+//                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
+//                     transition={{ duration: 0.2, ease: "easeInOut" }}
+//                     className="text-[12px] md:text-[16px] xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+//                   >
+//                     {tab}
+//                   </motion.h2>
+//                 </div>
+//               </motion.button>
+//             );
+//           })}
+//         </motion.div>
+
+//         {/* Tab Content */}
+//         <div className="relative w-full">
+//           {activeTab === 0 && <TeamSecDirectors />}
+//           {activeTab === 1 && (
+//             <TeamSecCommittees
+//               cellPy="px-2 py-[15px]!"
+//               cellWidth="xl:grid-cols-[370px_1fr_370px] grid-cols-[0.5fr_1fr_0.5fr]"
+//             />
+//           )}
+//           {activeTab === 2 && <TeamSecLeadership />}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TeamSecF;
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import TeamSecDirectors from "./TeamSecDirectors";
@@ -220,19 +993,100 @@ const TeamSecF = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = ["Board of Directors", "Board Committees", "Leadership Team"];
+  const tabsMob = [
+    <>
+      Board of <br /> Directors
+    </>,
+    <>
+      Board <br /> Committees
+    </>,
+    <>
+      Leadership <br /> Team
+    </>,
+  ];
+
+  // Map hashes to tab indices
+  const hashToTab = useCallback((hash) => {
+    switch (hash) {
+      case "#board-of-directors":
+        return 0;
+      case "#board-committees":
+        return 1;
+      case "#leadership":
+        return 2;
+      default:
+        return null;
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleURLChange = () => {
+      const currentHash = window.location.hash;
+      const index = hashToTab(currentHash);
+      if (index !== null) {
+        setActiveTab(index);
+      }
+    };
+
+    // 1. Initial check on mount
+    handleURLChange();
+
+    // 2. Standard listeners (back/forward and hash jumps)
+    window.addEventListener("hashchange", handleURLChange);
+    window.addEventListener("popstate", handleURLChange);
+
+    // 3. Patch pushState/replaceState to detect "silent" updates from TransitionLink
+    const originalPushState = window.history.pushState;
+    const originalReplaceState = window.history.replaceState;
+
+    window.history.pushState = function (...args) {
+      originalPushState.apply(this, args);
+      handleURLChange(); // Trigger tab update
+    };
+
+    window.history.replaceState = function (...args) {
+      originalReplaceState.apply(this, args);
+      handleURLChange(); // Trigger tab update
+    };
+
+    // 4. Fallback: Rapid interval check (catches any edge cases during transitions)
+    const interval = setInterval(handleURLChange, 200);
+
+    return () => {
+      window.removeEventListener("hashchange", handleURLChange);
+      window.removeEventListener("popstate", handleURLChange);
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+      clearInterval(interval);
+    };
+  }, [hashToTab]);
+
+  // Handle internal tab clicks: Also updates URL for consistency
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    const hashes = ["#board-of-directors", "#board-committees", "#leadership"];
+    window.history.pushState(null, "", hashes[index]);
+  };
 
   return (
-    <div className="overflow-visible relative">
+    <div id="" className="overflow-visible relative">
+      {/* Anchor Targets */}
+      <span id="board-of-directors" className="absolute top-[-150px]" />
+      <span id="board-committees" className="absolute top-[-150px]" />
+      <span id="leadership" className="absolute top-[-150px]" />
+
       <img
         className="purple_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[0px] md:top-[0px] lg:top-[-120px] xl:left-[-50px] 1920:left-[0px]"
         src="/purple_vector.svg"
+        alt=""
       />
       <img
         className="green_vctr absolute w-[200px] md:w-[300px] lg:w-[300px] xl:w-[400px] top-[0px] md:left-[0px] md:right-[auto] left-[-80px] md:top-[0px] lg:top-[-120px] xl:left-[200px] 1920:left-[200px]"
         src="/green_vector.svg"
+        alt=""
       />
 
-      <div className="fix pt-[0px] py-[20px] xl:py-[70px]">
+      <div className="fix pt-[20px] py-[50px] xl:py-[70px]">
         <div className="flex justify-between items-center flex-col lg:flex-row md:mb-[55px] mb-[25px] md:gap-5 gap-[0px]">
           <div className="flex flex-col lg:w-auto w-full items-start">
             <div className="flex gap-[10px] md:gap-[17px] xl:mt-0 mt-5 items-center justify-start text-[#101828] font-[Barlow] w-full md:w-fit xl:h-[96px]">
@@ -246,7 +1100,7 @@ const TeamSecF = () => {
                 Leadership &
               </motion.div>
             </div>
-            <div className="flex gap-[10px] md:gap-[17px]  items-center">
+            <div className="flex gap-[10px] md:gap-[17px] items-center">
               <motion.h2
                 initial={{ width: 0 }}
                 whileInView={{ width: "fit-content" }}
@@ -272,36 +1126,22 @@ const TeamSecF = () => {
               </div>
             </div>
           </div>
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: [0.7, 0, 0.4, 1], delay: 0.4 }}
-            viewport={{ amount: 0.25, once: true }}
-            className="flex items-end md:w-fit min-h-full"
-          >
-            <p className="text-black bw-r md:text-[22px] leading-[150%] lg:max-w-xl sm:mt-2 md:mt-5 mt-[15px]">
-              We see things differently, proactively find opportunities with an
-              agile team, and create exceptional value for our customers,
-              partners, and employees.
-            </p>
-          </motion.div> */}
         </div>
 
-        {/* MATCHED TABS STYLING */}
+        {/* DESKTOP TABS */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
           viewport={{ once: true, amount: 0.2 }}
-          className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white grid grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+          className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:grid hidden grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
         >
           {tabs.map((tab, i) => {
             const isActive = i === activeTab;
-
             return (
               <motion.button
                 key={i}
-                onClick={() => setActiveTab(i)}
+                onClick={() => handleTabClick(i)}
                 initial={false}
                 animate={{
                   backgroundImage: isActive
@@ -313,35 +1153,15 @@ const TeamSecF = () => {
                   "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
                 )}
               >
-                {/* <div className="flex items-center justify-left w-full gap-2">
-                  <motion.h2
-                    animate={{ color: isActive ? "#ffffff" : "#000000" }}
-                    transition={{ duration: 0.2, ease: "easeInOut" }}
-                    className="text-[12px] md:text-[16px] xl:text-[24px] bw-r xl:leading-[32px] leading-[24px]"
-                  >
-                    {tab}
-                  </motion.h2>
-                </div> */}
                 <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
                   <motion.h2
                     animate={{ color: isActive ? "#ffffff" : "#000000" }}
                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                    className="text-[12px] md:text-[16px] lg:hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
-                  >
-                    {tab.split(" ").map((word, i) => (
-                      <span key={i} className="block md:inline">
-                        {word}
-                      </span>
-                    ))}
-                  </motion.h2>
-                  <motion.h2
-                    animate={{ color: isActive ? "#ffffff" : "#000000" }}
-                    transition={{ duration: 0.2, ease: "easeInOut" }}
-                    className="text-[12px] md:text-[16px] lg:block hidden xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+                    className="text-[12px] md:text-[16px] xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
                   >
                     {tab}
                   </motion.h2>
-                </div>{" "}
+                </div>
                 <AnimatePresence mode="wait" initial={false}>
                   {isActive && (
                     <motion.img
@@ -356,6 +1176,45 @@ const TeamSecF = () => {
                     />
                   )}
                 </AnimatePresence>
+              </motion.button>
+            );
+          })}
+        </motion.div>
+
+        {/* MOBILE TABS */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [1, 0, 0.3, 1] }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="md:h-[60px] xl:h-[100px] max-w-[1000px] mx-auto bg-white lg:hidden grid grid-cols-3 border border-[#CDCDCD] rounded-2xl lg:rounded-[28px] overflow-hidden md:mb-[55px] mb-[25px]"
+        >
+          {tabsMob.map((tab, i) => {
+            const isActive = i === activeTab;
+            return (
+              <motion.button
+                key={i}
+                onClick={() => handleTabClick(i)}
+                initial={false}
+                animate={{
+                  backgroundImage: isActive
+                    ? "linear-gradient(110deg, #8F53A1 24.35%, #F47922 107.33%)"
+                    : "linear-gradient(to right, #ffffff, #ffffff)",
+                }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className={clsx(
+                  "relative flex items-left last:border-r-0 justify-between md:px-[12px] xl:px-[20px] xl:py-[10px] border-r border-[#CDCDCD] overflow-hidden cursor-pointer focus:outline-none",
+                )}
+              >
+                <div className="flex items-center xl:justify-start xl:py-0 py-2 justify-center w-full gap-2">
+                  <motion.h2
+                    animate={{ color: isActive ? "#ffffff" : "#000000" }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="text-[12px] md:text-[16px] xl:text-[24px] bw-r xl:leading-[32px] leading-[100%] text-center"
+                  >
+                    {tab}
+                  </motion.h2>
+                </div>
               </motion.button>
             );
           })}
