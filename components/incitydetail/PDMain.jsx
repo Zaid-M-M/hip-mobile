@@ -186,13 +186,13 @@ export default function PDMain({ park, allParks }) {
         />
       ) : null}
 
-      {/* {incity_3d_url && (
+      {incity_3d_url && (
         <Three
           incity_3d_h1={incity_3d_h1}
           incity_3d_h2={incity_3d_h2}
           incity_3d_url={incity_3d_url}
         />
-      )} */}
+      )}
       <ContMain leasing_details={incity_leasing_details_rep} />
       <CardSec incity_infrastructure={incity_infrastructure} />
       {/* <AMMain incity_amenities={incity_amenities} /> */}
