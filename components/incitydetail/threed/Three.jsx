@@ -24,7 +24,7 @@ const Three = ({ incity_3d_h1, incity_3d_h2, incity_3d_url }) => {
         </div>
       </div>
       <iframe
-        className="relative z-20 xl:h-[600px] h-auto xl:aspect-auto aspect-square mt-[50px] pr-[50px]"
+        className="relative z-20 xl:h-[600px] h-[71vh] xl:aspect-auto aspect-square mt-[50px] lg:pr-[50px]"
         src={incity_3d_url}
         width="100%"
         allow="fullscreen"
