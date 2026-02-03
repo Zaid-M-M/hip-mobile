@@ -436,7 +436,7 @@ const ProgressAccordionItem = ({
               {/* Video Container - No Radius, No Skeleton */}
               <div className="relative w-full aspect-video overflow-hidden">
                 <iframe
-                  src={`${video}?autoplay=0&title=0&byline=0&portrait=0`}
+                  src={`${video}?autoplay=1&title=0&byline=0&portrait=0`}
                   frameBorder="0"
                   allow="autoplay"
                   allowFullScreen
