@@ -2,7 +2,7 @@ import React from "react";
 
 const Three = ({ incity_3d_h1, incity_3d_h2, incity_3d_url }) => {
   return (
-    <div className="relative bg-black w-full xl:py-24 py-12 overflow-hidden">
+    <div className="relative bg-black w-full xl:py-15 py-12 overflow-hidden !pb-[0px]">
       <img
         src="/culture/vidbg.svg"
         className="top-12 right-[max(5%,calc((100vw-1340px)/2))] z-0 absolute"
@@ -22,12 +22,14 @@ const Three = ({ incity_3d_h1, incity_3d_h2, incity_3d_url }) => {
             <img src="/abstract_pattern.svg" className="abstract_svg w-max" />
           </div>
         </div>
-        <iframe
-          className="relative z-20 xl:h-[600px] h-auto xl:aspect-auto aspect-square"
-          src={incity_3d_url}
-          width="100%"
-        ></iframe>
       </div>
+      <iframe
+        className="relative z-20 xl:h-[600px] h-auto xl:aspect-auto aspect-square mt-[50px]"
+        src={incity_3d_url}
+        width="100%"
+        allow="fullscreen"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };
